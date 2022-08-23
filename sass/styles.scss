@@ -891,6 +891,37 @@ footer {
   }
 }
 
+.lottie-player {
+  position: absolute;
+  top: -50%;
+  left:-50%;
+}
+
+.mute {
+  background-image: url('../img/circle.png');
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.unmute {
+  background-image: url('../img/circle.png');
+}
+
+.float-button {
+  position: fixed;
+  right: 5%;
+  top: 10%;
+  transition: all 0.2s ease-in 0s;//this is the key attribute
+  z-index: 9999;
+  cursor: pointer;
+  }
+
 /* ==========================================================================
 Bootstrap override
 ========================================================================== */

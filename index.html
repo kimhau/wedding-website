@@ -32,13 +32,32 @@
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        function pictureChange()
+         {
+            if(!document.getElementById('track').muted) document.getElementById("lottie").src="https://assets10.lottiefiles.com/packages/lf20_tGCilb/mute unmute.json";
+            else  document.getElementById("lottie").src="https://assets8.lottiefiles.com/temp/lf20_zPWMRz.json";
+         }
+       </script>
 </head>
 <body id="top">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
+
+<audio id="track" autoplay loop muted>
+    <source src="audio/559927757.mp3" type="audio/mp3" >
+    Your browser does not support the audio element.
+  </audio>
 <section class="hero">
+   
+    
+    <div class='mute float-button' onclick="document.getElementById('track').muted = !document.getElementById('track').muted;$(this).toggleClass('unmute');if(!document.getElementById('track').muted) document.getElementById('track').play();  $('#lottie1').toggleClass('hide');  $('#lottie2').toggleClass('hide') ">
+        <lottie-player id="lottie1" class="hide lottie-player" src="https://assets8.lottiefiles.com/temp/lf20_zPWMRz.json" background="transparent"  speed="1"  style="width: 70px; height: 70px;"  loop autoplay></lottie-player>
+        <lottie-player id="lottie2" src="https://assets10.lottiefiles.com/packages/lf20_tGCilb/mute unmute.json" background="transparent"  speed="1"  style="width: 35px; height: 35px;"  ></lottie-player>
+    </div>
     <section class="navigation">
         <header>
             <div class="header-content">
@@ -89,6 +108,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
+                <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+                <a href="https://logwork.com/countdown-w79w" class="countdown-timer" data-timezone="Asia/Singapore" data-date="2022-12-02 18:00">倒数Countdown</a>
                 <h3>我们结婚啦！We are getting married!</h3>
                 <p>The date is 2<sup>nd</sup> of December 2022 and we would like you to be a part of
                     it.</p>
