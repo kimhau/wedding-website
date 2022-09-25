@@ -1,6 +1,5 @@
 $(document).ready(function () {
-
-    /***************** Waypoints ******************/
+  /***************** Waypoints ******************/
 
     $('.wp1').waypoint(function () {
         $('.wp1').addClass('animated fadeInLeft');
@@ -187,7 +186,7 @@ $(document).ready(function () {
             title: "Kim Hau and Yeu Qi's Wedding",
 
             // Event start date
-            start: new Date('Dec 22, 2022 18:00'),
+            start: new Date('Dec 02, 2022 18:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
@@ -206,6 +205,25 @@ $(document).ready(function () {
 
     $('#add-to-cal').html(myCalendar);
 
+    /***************** Countdown ******************/
+    function getWeddingDateFromNow() {
+        return new Date('Dec 02, 2022 18:00');
+    }
+
+    $('#clock-c').countdown(getWeddingDateFromNow(), function(event) {
+      var $this = $(this).html(event.strftime(''
+        +`<ul>
+        <li><span id="days" class="countdowntext">%D</span>天</li>
+        <li><span id="hours" class="countdowntext">%H</span>时</li>
+        <li><span id="minutes" class="countdowntext">%M</span>分</li>
+        <li><span id="seconds" class="countdowntext">%S</span>秒</li>
+        </ul>`));
+        // + '<span class="h1 font-weight-bold">%D</span> Day%!d'
+        // + '<span class="h1 font-weight-bold">%H</span> Hr'
+        // + '<span class="h1 font-weight-bold">%M</span> Min'
+        // + '<span class="h1 font-weight-bold">%S</span> Sec'));
+    });
+
 
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
@@ -218,7 +236,7 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycby_-bAeJXiMzHL8HwYZVAqndaBsu9tRt8cQH3eb-7TY_rWvl7dx_3vKfey9vmeF3ihb/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbwiwnJECAVKEiJGqEA_qXbuhdrGrGoBdLlYTrdnyll6a7bnCwbChHUyikLKQykUnd5K/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -240,8 +258,8 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
-function initMap() {
-    var location = {lat: 3.4787779, lng: 102.3279164};
+function initMap() {//3.4787778974680794, 102.33014801245294
+    var location = {lat: 3.4787778974680794, lng: 102.33014801245294};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
@@ -255,7 +273,7 @@ function initMap() {
 }
 
 function initBBSRMap() {
-    var la_fiesta ={lat: 3.4787779, lng: 102.3279164};
+    var la_fiesta ={lat: 3.4787778974680794, lng: 102.33014801245294};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,

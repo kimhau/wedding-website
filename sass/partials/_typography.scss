@@ -16,8 +16,8 @@ $bold: 700;
 
 // Sizes
 
-$font-size-h1: 60px;
-$font-size-h2: 40px;
+$font-size-h1: 40px;
+$font-size-h2: 30px;
 $font-size-h3: 24px;
 $font-size-h4: 18px;
 $font-size-h5: 15px;
@@ -47,6 +47,7 @@ p {
 
 h1 {
   font-size: $font-size-h1;
+  color: $h1-color;
 }
 
 h2 {
@@ -57,11 +58,11 @@ h2 {
 
 h3 {
   color: $h3-color;
-  font-size: $font-size-h4;
+  font-size: $font-size-h3;
   font-weight: $bold;
-  text-transform: uppercase;
   letter-spacing: 3px;
   line-height: $base-line-height;
+  font-family: 'zippy';
 }
 
 h4 {
@@ -73,4 +74,12 @@ h5 {
   color: $h5-color;
   text-transform: uppercase;
   font-weight: $semibold;
+}
+
+p {
+  color: #3D4351;
+  font-size: 16px;
+  font-weight: normal; 
+  letter-spacing: 3px;
+  line-height: 29px;
 }

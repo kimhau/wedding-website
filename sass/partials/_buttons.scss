@@ -17,6 +17,7 @@
 	background-color: $accent-color;
 }
 .btn-white {
+	color: $white-color;
 	font-size: 13px;
 	border: solid 2px;
 	-moz-border-radius: 40px;
@@ -26,8 +27,13 @@
 	border-color: $txt-light;
 }
 .btn-white:hover, .btn-white:focus {
-	color: $accent-color;
+	color: $white-color;
 	border-color: $accent-color;
+}
+.rsvp-btn:hover, .rsvp-btn:focus {
+	color: $white-color;
+	border-color: $accent-color;
+	background-color: $accent-color;
 }
 .btn-fill {
 	color: $white-color;

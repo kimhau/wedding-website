@@ -9,6 +9,48 @@
 @import "partials/colors";
 @import "partials/layout";
 
+@font-face {
+	font-family: 'footprint';
+	src: url('../fonts/footprint-start-cute.ttf');
+  font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'cintaly';
+	src: url('../fonts/Cintaly.ttf');
+  font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'fortune';
+	src: url('../fonts/Daughter of Fortune.ttf');
+  font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'zippy';
+	src: url('../fonts/Zippy.ttf');
+  font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'two';
+	src: url('../fonts/2.ttf');
+  font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'one';
+	src: url('../fonts/1.ttf');
+  font-weight: normal;
+	font-style: normal;
+  color: black;
+}
 /* ==========================================================================
 Global Styles
 ========================================================================== */
@@ -252,13 +294,13 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/hero-min.jpg') center left;
+  background: url('../img/hero-min.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
-  background-position-x: 10%;
+  background-position-x: 60%;
 
   /*.rsvp-btn {
     position: absolute;
@@ -654,6 +696,7 @@ Instagram
   }
 }
 
+
 /* ==========================================================================
 Engagement Pics
 ========================================================================== */
@@ -757,7 +800,7 @@ Google map
 #map-content-wrapper {
   position: relative;
   margin-top: -502px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 #map-content {
   margin-top: 40px;
@@ -789,7 +832,7 @@ Google map
 RSVP form
 ========================================================================== */
 .rsvp {
-  padding-bottom: 140px;
+  padding-bottom: 50px;
   .rsvp-form {
     .rsvp-btn {
       padding: 15px 0;
@@ -822,7 +865,7 @@ RSVP form
         left: 30px;
         transform: translateY(-50%);
       }
-      i.fa-user, i.fa-users, i.fa-envelope, .fa-phone {
+      i.fa-user, i.fa-users, i.fa-envelope, .fa-phone, .fa-sticky-note {
         font-size: 14px;
         position: absolute;
         top: 50%;
@@ -921,7 +964,56 @@ footer {
   z-index: 9999;
   cursor: pointer;
   }
+/*
+*
+* ==================================================
+* UNNECESSARY STYLE - JUST TO MAKE IT LOOKS NICE
+* ==================================================
+*
+*/
+.countdown {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+}
 
+.countdown span {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 3rem;
+    margin-left: 0.8rem;
+}
+
+.countdown span:first-of-type {
+    margin-left: 0;
+}
+
+
+.countdown-circles {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.countdown-circles span {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-circles span:first-of-type {
+  margin-left: 0;
+}
+
+
+.bg-gradient-4 {
+  background: #007991;
+  background: -webkit-linear-gradient(to right, #007991, #78ffd6);
+  background: linear-gradient(to right, #007991, #78ffd6);
+}
 /* ==========================================================================
 Bootstrap override
 ========================================================================== */
@@ -930,4 +1022,39 @@ body.modal-open {
 }
 .modal-body {
   padding:25px;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+  color:#3D4351;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.countdowntext {
+  background-color: #f59898;
+   font-size: 30px;
+   color: white;
+   border-radius: 5px;
+   padding: 8px;
+   font-weight: bold;
+}
+
+
+@media all and (max-width: 768px) {
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
 }
