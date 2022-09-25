@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/add-to-calendar-button@1/assets/css/atcb.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     
@@ -448,7 +449,7 @@
                     <div class="section-padding">
                         <h3>Thank you!</h3>
                         <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
+                        <label id="add-to-calendar-label" for="checkbox-for-749938" class="btn btn-fill btn-small"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Add to Calendar</label>
                     </div>
                 </div>
             </div><!-- /.modal-content -->
@@ -568,6 +569,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@1" async defer></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
@@ -603,5 +605,30 @@
 
   gtag('config', 'G-G7DZXXVBH0');
 </script>
+<script type="application/javascript">
+    const config = {
+      name: "Kim Hau and Yeu Qi's Wedding",
+      description: "We can't wait to see you on our big day. For any queries or issues, please contact Kim Hau at +65 90532343.",
+      startDate:"2022-12-2",
+        endDate:"2022-12-2",
+        startTime:"18:00",
+     endTime:"21:00",
+     location: 'Restoran Suang Hee, Mentakab',
+      options:[
+        "Apple",
+        "Google",
+        "iCal",
+        "Microsoft365",
+        "MicrosoftTeams",
+        "Outlook.com",
+        "Yahoo"
+    ],
+      timeZone: "Asia/Kuala_Lumpur",
+      trigger: "click",
+      iCalFileName: "Reminder-Event",
+    };
+    const button = document.querySelector('#add-to-calendar-label');
+    button.addEventListener('click', () => atcb_action(config, button));
+  </script>
 </body>
 </html>
