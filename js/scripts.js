@@ -189,11 +189,11 @@ $(document).ready(function () {
             start: new Date('Dec 02, 2022 18:00'),
 
             // Event duration (IN MINUTES)
-            // duration: 120,
+            duration: 180,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            // end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('Dec 02, 2022 21:00'),
 
             // Event Address
             address: 'Restoran Suang Hee, Mentakab',
